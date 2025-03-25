@@ -1,0 +1,64 @@
+@import 'node_modules/modern-normalize/modern-normalize.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  /* --line-height-base: 1.5;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+  --font-size-base: 16px; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+    /* --main-color: #101828;
+    --text-color: #475467;
+    --gray-color: #6C717B;
+    --button-color: #E44848;
+    --button-hover-color: #D84343;
+    --rating-color: #FFC531;
+    --gray-light-color: #DADDE1;
+    --badges-color: #F2F4F7;
+    --inputs-color: #F7F7F7;
+    --white-color: #FFFFFF; */
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  display: block;
+}
