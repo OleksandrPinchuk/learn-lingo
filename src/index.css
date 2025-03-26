@@ -1,4 +1,4 @@
-@import 'node_modules/modern-normalize/modern-normalize.css';
+@import "modern-normalize/modern-normalize.css";
 
 *,
 *::before,
@@ -21,20 +21,31 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-    /* --main-color: #101828;
-    --text-color: #475467;
-    --gray-color: #6C717B;
-    --button-color: #E44848;
-    --button-hover-color: #D84343;
+    --text-color: #121417;
+    --orange-color: #F4C550;
+    --orange-light-color: #FBE9BA;
+    --green-color: #9FBAAE;
+    --green-light-color: #CBDED3;
+    --blue-color: #9FB7CE;
+    --blue-light-color: #BFD6EA;
+    --pink-color: #E0A39A;
+    --pink-light-color: #F2C0BD;
+    --red-color: #F0AA8D;
+    --red-light-color: #F4C8BA;
+    --green-dot-color: #38CD3E;
     --rating-color: #FFC531;
-    --gray-light-color: #DADDE1;
-    --badges-color: #F2F4F7;
-    --inputs-color: #F7F7F7;
-    --white-color: #FFFFFF; */
+    --gray-color: #8A8A89;
+    --gray-light-color: rgba(18, 20, 23, 0.2);
+    --gray-light-color: #8A8A89;
+    --white-color: #FFFFFF;
+    --white-dark-color: #F8F8F8;
+    --button-color: #F4C550;
+    --button-hover-color: #FFDC86;
 }
 
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1,
