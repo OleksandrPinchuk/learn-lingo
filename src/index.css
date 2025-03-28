@@ -7,14 +7,11 @@
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  /* --line-height-base: 1.5;
+  --line-height-base: 1.5;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 600;
-  --font-size-base: 16px; */
+  --font-weight-bold: 700;
+  --font-size-base: 16px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,6 +43,9 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 h1,
@@ -81,4 +81,8 @@ button {
   margin: 0 auto;
   padding: 48px 64px 32px 64px;
   border: 1px solid transparent;
+}
+
+.active {
+  color: red;
 }

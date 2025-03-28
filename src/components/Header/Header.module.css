@@ -1,4 +1,49 @@
+.header {
+    padding: 20px 128px;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    line-height: 1.25;
+}
+
+.link:not(:last-child) {
+    margin-right: 28px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.logIn {
+    display: flex;
+    /* width: 173px; */
+    height: 20px;
+    margin-right: 16px;
+    border: none;
+    background-color: var(--white-color);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.25;
+}
+
+.registration {
+    width: 166px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: var(--text-color);
+    color: var(--white-color);
+    border: none;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.25;
+}
+
 .svg {
-    width: 133px;
-    
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }

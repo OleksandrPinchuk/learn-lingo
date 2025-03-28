@@ -1,7 +1,7 @@
 
 const Teachers = () => {
     return (
-        <div>Teachers</div>
+        <div className="container">Teachers</div>
     )
 }
 
