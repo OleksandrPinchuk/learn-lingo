@@ -1,4 +1,79 @@
+.wrapper {
+
+}
+
+.box {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.content {
+    width: 720px;
+    height: 530px;
+    padding: 98px 64px;
+    background-color: var(--white-dark-color);
+    border-radius: 30px;
+    margin-right: 24px;
+}
+
+.title {
+    font-weight: var(--font-weight-medium);
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.96px;
+    margin-bottom: 32px;
+}
+
+.message {
+    width: 471px;
+    line-height: 1.38;
+    letter-spacing: -0.32px;
+    margin-bottom: 64px;
+}
+
+.button {
+    width: 267px;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--orange-color);
+    font-weight: var(--font-weight-bold);
+    font-size: 18px;
+    line-height: 1.56;
+}
+
+.button:hover {
+    background-color: var(--button-hover-color);
+}
+
 .svg {
     width: 568px;
     height: 530px;
+}
+
+.statistic {
+    display: flex;
+    padding: 40px 123px ;
+    gap: 100px;
+    border: 1.5px dashed var(--orange-color);
+    border-radius: 30px;
+}
+
+.item {
+    display: flex;
+}
+
+.number {
+    font-weight: var(--font-weight-medium);
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: -0.56px;
+    margin-right: 16px;
+    white-space: nowrap;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.28px;
 }

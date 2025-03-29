@@ -36,7 +36,6 @@
     --gray-light-color: #8A8A89;
     --white-color: #FFFFFF;
     --white-dark-color: #F8F8F8;
-    --button-color: #F4C550;
     --button-hover-color: #FFDC86;
 }
 
@@ -57,6 +56,14 @@ h6,
 p,
 span {
   margin: 0;
+}
+
+ul,
+li,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 img {
