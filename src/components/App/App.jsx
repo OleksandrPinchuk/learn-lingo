@@ -3,16 +3,25 @@ import Layout from "../Layout/Layout";
 import Home from "../../pages/Home/Home";
 import NotFound from "../../pages/NotFound/NotFound";
 import Teachers from "../../pages/Teachers/Teachers";
+import AuthProvider from "../../firebase/AuthContext.jsx";
+import Register from "../Register/Register.jsx";
+import Dashboard from "../Dashboard/Dashboard.jsx";
+import Login from "../Login/Login.jsx";
 
 const App = () => {
     return (
-        <Layout>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/teachers" element={<Teachers />} />
-                <Route path="*" element={<NotFound />}  />
-            </Routes>
-        </Layout>
+        <AuthProvider>
+            <Layout>
+                <Routes>
+                    {/* <Route path="/" element={<Home />} />
+                    <Route path="/teachers" element={<Teachers />} />
+                    <Route path="*" element={<NotFound />}  /> */}
+                    <Route path="/" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                </Routes>
+            </Layout>
+        </AuthProvider>
     )
 }
 
