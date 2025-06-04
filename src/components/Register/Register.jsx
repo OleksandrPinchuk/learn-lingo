@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ref, set } from "firebase/database";
-import { auth, db } from "../../firebase/firebase.js";
+import { auth, database } from "../../firebase/firebase.js";
 import { useNavigate } from "react-router-dom";
 
-export default function Register() {
+const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [username, setUsername] = useState("");
@@ -14,7 +14,7 @@ export default function Register() {
         e.preventDefault();
         try {
         const userCred = await createUserWithEmailAndPassword(auth, email, password);
-        await set(ref(db, "users/" + userCred.user.uid), {
+        await set(ref(database, "users/" + userCred.user.uid), {
             username,
             email
         });
@@ -33,3 +33,5 @@ export default function Register() {
         </form>
     );
 }
+
+export default Register;
