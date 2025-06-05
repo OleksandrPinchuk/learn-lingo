@@ -2,7 +2,7 @@ import Header from "../Header/Header"
 
 const Layout = ({children}) => {
     return (
-        <div>
+        <div >
             <Header />
             {children}
         </div>

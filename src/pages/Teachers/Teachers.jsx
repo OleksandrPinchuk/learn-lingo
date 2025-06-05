@@ -3,6 +3,7 @@ import { auth, database } from "../../firebase/firebase";
 import { child, get, ref } from "firebase/database";
 import { useAuth } from "../../firebase/AuthContext";
 import { signOut } from "firebase/auth";
+import css from "./Teachers.module.css";
 
 const Teachers = () => {
     const [teachers, setTeachers] = useState([]);
@@ -11,7 +12,7 @@ const Teachers = () => {
     const { currentUser } = useAuth();
     const handleLogout = async () => {
         await signOut(auth);
-            };
+        };
 
     useEffect(() => {
         const realtimeDatabase = ref(database);
@@ -28,7 +29,7 @@ const Teachers = () => {
         }).finally(() => setLoading(false));
     },[])
     return (
-        <div>
+        <div className={css.container}>
             <div>
                 <h2>Welcome {currentUser?.email}</h2>
                 <button onClick={handleLogout}>Logout</button>
