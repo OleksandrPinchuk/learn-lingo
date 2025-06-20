@@ -1,0 +1,12 @@
+.header{
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.2;
+}
+
+.text{
+    margin-bottom: 40px;
+    color: var(--modal-text-color);
+    line-height: 1.4;
+}

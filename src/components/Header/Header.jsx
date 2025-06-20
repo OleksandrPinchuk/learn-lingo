@@ -1,8 +1,15 @@
 import { NavLink } from "react-router";
+import { useState } from "react";
+import AuthButtons from "../AuthButtons/AuthButtons";
+import ModalWrap from "../ModalWrap/ModalWrap";
 import css from "./Header.module.css";
-import icons from "/symbol-defs.svg";
+import Login from "../Login/Login";
+import Register from "../Register/Register";
 
 const Header = () => {
+    const [isLoginOpen, setIsLoginOpen] = useState(false);
+    const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+
     return (
         <header className={css.header}>
             <a href="/">
@@ -12,15 +19,16 @@ const Header = () => {
                 <NavLink to="/" className={css.link}>Home</NavLink>
                 <NavLink to="/teachers" className={css.link}>Teachers</NavLink>
             </nav>
-            <div className={css.box}>
-                <button className={css.logIn}>
-                    <svg className={css.svg}>
-                        <use href={`${icons}#icon-log-in`} />
-                    </svg>
-                    Log in
-                </button>
-                <button className={css.registration}>Registration</button>
-            </div>
+            <AuthButtons
+                onLoginClick={() => { setIsLoginOpen(true) }}
+                onRegisterClick={() => { setIsRegisterOpen(true) }} 
+            />
+            <ModalWrap isOpen={isLoginOpen} handleClose={() => { setIsLoginOpen(false) }}>
+                <Login />
+            </ModalWrap>
+            <ModalWrap isOpen={isRegisterOpen} handleClose={() => { setIsRegisterOpen(false) }}>
+                <Register />
+            </ModalWrap>
         </header>
     )
 }

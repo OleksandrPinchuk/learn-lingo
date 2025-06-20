@@ -37,6 +37,7 @@
     --white-color: #FFFFFF;
     --white-dark-color: #F8F8F8;
     --button-hover-color: #FFDC86;
+    --modal-text-color: rgba(18, 20, 23, 0.8);
 }
 
 body {
