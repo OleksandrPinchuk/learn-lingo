@@ -12,10 +12,24 @@
 }
 
 .modal {
+    position: relative;
     background: var(--white-color);
     padding: 64px;
     border-radius: 30px;
-    max-width: 600px;
+    max-width: 566px;
     width: 100%;
     /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); */
+}
+
+.svg{
+    width: 32px;
+    height: 32px;
+}
+
+.button{
+    position: absolute;
+    top: 20px;
+    left: 514px;
+    border: none;
+    background-color: var(--white-color);
 }

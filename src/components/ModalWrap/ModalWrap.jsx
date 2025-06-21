@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import icons from "/symbol-defs.svg";
 import css from "./ModalWrap.module.css";
 
 const ModalWrap = ({ children, handleClose, isOpen }) => {
@@ -30,6 +31,11 @@ const ModalWrap = ({ children, handleClose, isOpen }) => {
     return (
         <div onClick={handleBackdropClick} className={css.backdrop}>
             <div className={css.modal}>
+                <button onClick={()=> handleClose()} className={css.button}>
+                    <svg className={css.svg}>
+                        <use href={`${icons}#icon-x`} />
+                    </svg>
+                </button>
                 {children}
             </div>
         </div>

@@ -4,7 +4,7 @@ import AuthButtons from "../AuthButtons/AuthButtons";
 import ModalWrap from "../ModalWrap/ModalWrap";
 import css from "./Header.module.css";
 import Login from "../Login/Login";
-import Register from "../Register/Register";
+import Registration from "../Registration/Registration.jsx";
 
 const Header = () => {
     const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -27,7 +27,7 @@ const Header = () => {
                 <Login />
             </ModalWrap>
             <ModalWrap isOpen={isRegisterOpen} handleClose={() => { setIsRegisterOpen(false) }}>
-                <Register />
+                <Registration />
             </ModalWrap>
         </header>
     )
