@@ -17,9 +17,9 @@ const Registration = () => {
                 username: data.username,
                 email: data.email,
             });
-            navigate("/dashboard");
+            navigate("/teachers");
         } catch (error) {
-        alert(error.message);
+            alert(error.message);
         }
     };
 
@@ -27,19 +27,20 @@ const Registration = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <h2 className={css.header}>Registration</h2>
             <p className={css.text}>Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information</p>
-            <input placeholder="Name" {...register("username", { required: "Name is required" })} className={css.input} />
             {errors.username && <p className={css.error}>{errors.username.message}</p>}
+            <input placeholder="Name" {...register("username", { required: "Name is required" })} className={css.input} />
+            {errors.email && <p className={css.error}>{errors.email.message}</p>}
             <input placeholder="Email" {...register("email", { required: "Email is required", pattern: {
                         value: /^\S+@\S+$/i,
                         message: "Invalid email address"
                     } })} className={css.input} />
-            {errors.email && <p className={css.error}>{errors.email.message}</p>}
+            {errors.password && <p className={css.error}>{errors.password.message}</p>}
             <input placeholder="Password" {...register("password", { required: "Password is required", minLength: {
                         value: 6,
                         message: "Password must be at least 6 characters"
             }
             })} className={css.input} />
-            {errors.password && <p className={css.error}>{errors.password.message}</p>}
+            
             <button type="submit" className={css.button}>Sign Up</button>
         </form>
     );

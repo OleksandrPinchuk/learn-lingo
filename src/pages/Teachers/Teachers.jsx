@@ -29,22 +29,24 @@ const Teachers = () => {
         }).finally(() => setLoading(false));
     },[])
     return (
+        
         <div className={css.container}>
             <div>
-                <h2>Welcome {currentUser?.email}</h2>
+                <p>Welcome {currentUser?.email}</p>
                 <button onClick={handleLogout}>Logout</button>
             </div>
-            <h2>Cards</h2>
             <ul>
                 {teachers.map((teacher, index) => (
-                <li key={index}>
-                    <h3>{teacher.name} {teacher.surname}</h3>
-                    <img src={teacher.avatar_url} alt={teacher.name} width="100" />
-                    <p>Speaks: {teacher.languages.join(", ")}</p>
-                    <p>Rating: {teacher.rating}</p>
-                    <p>Price per hour: ${teacher.price_per_hour}</p>
-                    <p>Experience: {teacher.experience}</p>
-                </li>
+                    <li key={index} className={css.card}>
+                        <div className=""><img src={teacher.avatar_url} alt={teacher.name} width="100" /></div>
+                        <div className="">
+                            <h3 className="">{teacher.name} {teacher.surname}</h3>
+                            <p className="">Speaks: {teacher.languages.join(", ")}</p>
+                            <p className="">Rating: {teacher.rating}</p>
+                            <p className="">Price per hour: ${teacher.price_per_hour}</p>
+                            <p className="">{teacher.experience}</p>
+                        </div>
+                    </li>
                 ))}
             </ul>
         </div>

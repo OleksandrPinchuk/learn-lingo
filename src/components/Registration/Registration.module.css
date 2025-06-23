@@ -44,3 +44,8 @@
 .button:hover{
     background-color: var(--button-hover-color);
 }
+
+.error{
+    font-size: 14px;
+    color: var(--red-color);
+}
