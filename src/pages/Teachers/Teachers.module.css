@@ -6,3 +6,47 @@
 .card{
     display: flex;
 }
+
+.img{
+    border-radius: 50%;
+}
+
+.circle{
+    margin-right: 48px;
+    border-radius: 50%;
+    border: 3px solid var(--orange-light-color);
+    padding: 9px;
+    height: 120px;
+    width: 120px;
+}
+
+.figures{
+    display: flex;
+}
+
+.star {
+    width: 16px;
+    height: 16px;
+    fill: var(--rating-color);
+    margin-right: 8px;
+}
+
+.icon {
+    width: 24px;
+    height: 26px;
+}
+
+.favorite {
+    fill: var(--button-color);
+}
+
+.heartBtn {
+    border: none;
+    background: transparent;
+    margin-left: 12px;
+    transition: transform 0.2s;
+}
+
+.heartBtn:hover {
+    transform: scale(1.1);
+}
